@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class PatternLine {
-    public PatternLine(int index) {
+    public PatternLine(int index, UsedTilesGiveInterface usedTiles, WallLine wallLine, Floor floor) {
 
     }
     public void put(Collection<Tile> tiles) {
