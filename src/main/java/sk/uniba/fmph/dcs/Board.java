@@ -27,7 +27,7 @@ public class Board {
         pointPattern.add(new Points(-3));
         pointPattern.add(new Points(-3));
 
-        floor = new Floor(new UsedTiles(), pointPattern);
+        floor = new Floor(usedTiles, pointPattern);
 
         for(int i = 1; i <= 5; i++) {
             wall.add(new WallLine(i - 1));
@@ -77,8 +77,9 @@ public class Board {
         return GameFinished.gameFinished(wall);
     }
 
-    public void endGame() {
+    public Points endGame() {
         points = new Points(points.getValue() + FinalPointsCalculation.getPoints(wall).getValue());
+        return points;
     }
 
     public String state() {
